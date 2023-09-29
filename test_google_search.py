@@ -4,6 +4,12 @@ import random
 import string
 
 
+def test_google_text_searhed():
+    browser.open('https://google.com')
+    browser.element('[name="q"]').should(be.blank).type('yashaka/selene').press_enter()
+    browser.element('[id="search"]').should(have.text('yashaka/selene: User-oriented Web UI browser'))
+
+
 def test_random_text_not_found_in_google():
     browser.open('https://google.com')
     random_text = ''.join(random.choices(string.ascii_letters + string.digits, k=50))
