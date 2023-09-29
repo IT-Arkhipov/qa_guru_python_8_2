@@ -2,7 +2,6 @@ from selene import be, have
 from selene.support.shared import browser
 import random
 import string
-import pytest
 
 
 def test_random_text_not_found_in_google():
